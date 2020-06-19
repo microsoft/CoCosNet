@@ -1,0 +1,4 @@
+img\WOMEN\Dresses\id_00000244\02_1_front.jpg
+img\WOMEN\Dresses\id_00000203\03_1_front.jpg
+img\WOMEN\Cardigans\id_00006462\02_7_additional.jpg
+img\WOMEN\Cardigans\id_00006266\02_2_side.jpg

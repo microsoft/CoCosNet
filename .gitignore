@@ -1,0 +1,8 @@
+saved_files/
+scripts/
+__pycache__/
+models/networks/Synchronized-BatchNorm-PyTorch/
+models/networks/sync_batchnorm/
+*.pyc
+*.pth
+*.npy

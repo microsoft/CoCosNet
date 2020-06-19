@@ -1,0 +1,6 @@
+ADE_val_00001232.jpg,ADE_train_00004996.jpg
+ADE_val_00001517.jpg,ADE_train_00007201.jpg
+ADE_val_00001697.jpg,ADE_train_00015171.jpg
+ADE_val_00001599.jpg,ADE_train_00017763.jpg
+ADE_val_00001996.jpg,ADE_train_00010793.jpg
+ADE_val_00001349.jpg,ADE_train_00007860.jpg
