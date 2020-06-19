@@ -2,23 +2,23 @@
 ![Teaser](imgs/teaser.png)
 ### [Project page](https://panzhang0212.github.io/CoCosNet/) |   [Paper](https://arxiv.org/abs/2004.05571) | [Video](https://www.youtube.com/watch?v=BdopAApRSgo&feature=emb_logo)
 <!-- Cross-domain Correspondence Learning for Exemplar-based Image Translation (CVPR 2020 Oral). -->
-<br>
+<!-- <br> -->
 [Pan Zhang](https://panzhang0212.github.io/),  [Bo Zhang](https://www.microsoft.com/en-us/research/people/zhanbo/), [Dong Chen](https://www.microsoft.com/en-us/research/people/doch/),  [Lu Yuan](https://www.microsoft.com/en-us/research/people/luyuan/), and [Fang Wen](https://www.microsoft.com/en-us/research/people/fangwen/).
-<br>
+<!-- <br> -->
 
 
 ## Abstract
 >We present a general framework for exemplar-based image translation, which synthesizes a photo-realistic image from the input in a distinct domain (e.g., semantic segmentation mask, or edge map, or pose keypoints), given an exemplar image. The output has the style (e.g., color, texture) in consistency with the semantically corresponding objects in the exemplar. We propose to jointly learn the crossdomain correspondence and the image translation, where both tasks facilitate each other and thus can be learned with weak supervision. The images from distinct domains are first aligned to an intermediate domain where dense correspondence is established. Then, the network synthesizes images based on the appearance of semantically corresponding patches in the exemplar. We demonstrate the effectiveness of our approach in several image translation tasks. Our method is superior to state-of-the-art methods in terms of image quality significantly, with the image style faithful to the exemplar with semantic consistency. Moreover, we show the utility of our method for several applications
 
 ## Installation
-Clone Synchronized-BatchNorm-PyTorch rep.
+Clone the Synchronized-BatchNorm-PyTorch repository.
 ```
 cd models/networks/
 git clone https://github.com/vacancy/Synchronized-BatchNorm-PyTorch
 cp -rf Synchronized-BatchNorm-PyTorch/sync_batchnorm .
 cd ../../
 ````
-Install dependencies.
+Install dependencies:
 ```bash
 pip install -r requirements.txt
 ````
@@ -26,7 +26,7 @@ pip install -r requirements.txt
 ## Generating Images Using Pretrained Model
 
 #### 1) ADE20k (mask-to-image) 
-Download pretrained model from [here](https://drive.google.com/drive/folders/1BEBBENbEr9tutZsyGGc3REUuuOYqf6M3?usp=sharing), save them in `checkpoints/ade20k`, and then run  
+Download the pretrained model from [here](https://drive.google.com/drive/folders/1BEBBENbEr9tutZsyGGc3REUuuOYqf6M3?usp=sharing) and save them in `checkpoints/ade20k`. Then run the command 
 ````
 python test.py --name ade20k --dataset_mode ade20k --dataroot ./imgs/ade20k --gpu_ids 0 --nThreads 0 --batchSize 6 --use_attention --maskmix --warp_mask_losstype direct --PONO --PONO_C
 ````  
@@ -36,21 +36,21 @@ python test.py --name ade20k --dataset_mode ade20k --dataroot ./imgs/ade20k --gp
 ````
 
 #### 2) Celebahq (mask-to-face)  
-Download pretrained model from [here](https://drive.google.com/drive/folders/16xgIrGzGBKJWbAUROM71wiA1cf7zrQk5?usp=sharing), save them in `checkpoints/celebahq`, then run the command:
+Download the pretrained model from [here](https://drive.google.com/drive/folders/16xgIrGzGBKJWbAUROM71wiA1cf7zrQk5?usp=sharing), save them in `checkpoints/celebahq`, then run the command:
 ````
 python test.py --name celebahq --dataset_mode celebahq --dataroot ./imgs/celebahq --gpu_ids 0 --nThreads 0 --batchSize 4 --use_attention --maskmix --warp_mask_losstype direct --PONO --PONO_C --warp_bilinear --adaptor_kernel 4
 ````  
 , then the results will be saved in [`output/test/celebahq`](https://github.com/panzhang0212/CoCosNet_Pytorch/blob/master/output/test/celebahq/0.png).
 
 #### 3) Celebahq (edge-to-face) 
-Download pretrained model from [here](https://drive.google.com/drive/folders/1SCUrAPsEb6HOx8EtI89ED4wsOR8mrPDF?usp=sharing), save them in `checkpoints/celebahqedge`, then run  
+Download the pretrained model from [here](https://drive.google.com/drive/folders/1SCUrAPsEb6HOx8EtI89ED4wsOR8mrPDF?usp=sharing), save them in `checkpoints/celebahqedge`, then run  
 ````
 python test.py --name celebahqedge --dataset_mode celebahqedge --dataroot ./imgs/celebahqedge --gpu_ids 0 --nThreads 0 --batchSize 4 --use_attention --maskmix --PONO --PONO_C --warp_bilinear --adaptor_kernel 4
 ````  
 the results will be stored in [`output/test/celebahqedge`](https://github.com/panzhang0212/CoCosNet_Pytorch/blob/master/output/test/celebahqedge/0.png).
 
 #### 4) DeepFashion (pose-to-image)
-Download pretrained model from [here](https://drive.google.com/drive/folders/1vyzTdhQqY9ljsAx4u4xPvytX3wR75GYB?usp=sharing), save them in `checkpoints/deepfashion`, then run the following command:
+Download the pretrained model from [here](https://drive.google.com/drive/folders/1vyzTdhQqY9ljsAx4u4xPvytX3wR75GYB?usp=sharing), save them in `checkpoints/deepfashion`, then run the following command:
 ````
 python test.py --name deepfashion --dataset_mode deepfashion --dataroot ./imgs/DeepFashion --gpu_ids 0 --nThreads 0 --batchSize 4 --use_attention --PONO --PONO_C --warp_bilinear --no_flip --warp_patch --video_like --adaptor_kernel 4
 ````  
@@ -110,4 +110,4 @@ If you use this code for your research, please cite our papers.
 ```
 
 ## Acknowledgments
-This code borrows heavily from [SPADE](https://github.com/NVlabs/SPADE). We thank Jiayuan Mao for his [Synchronized Batch Normalization code](https://github.com/vacancy/Synchronized-BatchNorm-PyTorch).
+This code borrows heavily from [SPADE](https://github.com/NVlabs/SPADE). We also thank Jiayuan Mao for his [Synchronized Batch Normalization code](https://github.com/vacancy/Synchronized-BatchNorm-PyTorch).
