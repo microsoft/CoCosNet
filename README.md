@@ -1,4 +1,4 @@
-# Cross-domain Correspondence Learning for Exemplar-based Image Translation (CVPR 2020 oral, official implementation)
+# Cross-domain Correspondence Learning for Exemplar-based Image Translation (CVPR 2020 oral, official Pytorch implementation)
 ![Teaser](imgs/teaser.png)
 ### [Project page](https://panzhang0212.github.io/CoCosNet/) |   [Paper](https://arxiv.org/abs/2004.05571) | [Video](https://www.youtube.com/watch?v=BdopAApRSgo&feature=emb_logo)
 <!-- Cross-domain Correspondence Learning for Exemplar-based Image Translation (CVPR 2020 Oral). -->
