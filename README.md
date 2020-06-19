@@ -2,8 +2,11 @@
 ![Teaser](imgs/teaser.png)
 ### [Project page](https://panzhang0212.github.io/CoCosNet/) |   [Paper](https://arxiv.org/abs/2004.05571) | [Video](https://www.youtube.com/watch?v=BdopAApRSgo&feature=emb_logo)
 
-Cross-domain Correspondence Learning for Exemplar-based Image Translation. (CVPR 2020 Oral)<br>
+Cross-domain Correspondence Learning for Exemplar-based Image Translation (CVPR 2020 Oral).
+*Code coming soon*
+<br>
 [Pan Zhang](https://panzhang0212.github.io/),  [Bo Zhang](https://www.microsoft.com/en-us/research/people/zhanbo/), [Dong Chen](https://www.microsoft.com/en-us/research/people/doch/),  [Lu Yuan](https://www.microsoft.com/en-us/research/people/luyuan/), and [Fang Wen](https://www.microsoft.com/en-us/research/people/fangwen/).<br>
+
 
 ## Abstract
 >We present a general framework for exemplar-based image translation, which synthesizes a photo-realistic image from the input in a distinct domain (e.g., semantic segmentation mask, or edge map, or pose keypoints), given an exemplar image. The output has the style (e.g., color, texture) in consistency with the semantically corresponding objects in the exemplar. We propose to jointly learn the crossdomain correspondence and the image translation, where both tasks facilitate each other and thus can be learned with weak supervision. The images from distinct domains are first aligned to an intermediate domain where dense correspondence is established. Then, the network synthesizes images based on the appearance of semantically corresponding patches in the exemplar. We demonstrate the effectiveness of our approach in several image translation tasks. Our method is superior to state-of-the-art methods in terms of image quality significantly, with the image style faithful to the exemplar with semantic consistency. Moreover, we show the utility of our method for several applications
