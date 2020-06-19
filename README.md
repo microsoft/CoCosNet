@@ -1,5 +1,5 @@
 # Cross-domain Correspondence Learning for Exemplar-based Image Translation
-<!-- ![Teaser](imgs/teaser.png) -->
+![Teaser](imgs/teaser.png)
 ### [Project page](https://panzhang0212.github.io/CoCosNet/) |   [Paper](https://arxiv.org/abs/2004.05571) | [Video](https://www.youtube.com/watch?v=BdopAApRSgo&feature=emb_logo)
 <!-- Cross-domain Correspondence Learning for Exemplar-based Image Translation (CVPR 2020 Oral). -->
 ***Code coming soon***
