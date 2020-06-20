@@ -36,7 +36,7 @@ Download the pretrained model from [here](https://drive.google.com/drive/folders
 ````bash
 python test.py --name ade20k --dataset_mode ade20k --dataroot ./imgs/ade20k --gpu_ids 0 --nThreads 0 --batchSize 6 --use_attention --maskmix --warp_mask_losstype direct --PONO --PONO_C
 ````
-The results are saved in [`output/test/ade20k`](https://github.com/panzhang0212/CoCosNet_Pytorch/blob/master/output/test/ade20k/0.png). If you don't want to use mask of exemplar when testing, you can download model from [here](https://drive.google.com/drive/folders/1m4LXbOc00cu8hXCgf-_N55AIAE9R__m6?usp=sharing), save them in `checkpoints/ade20k`, and run
+The results are saved in [`output/test/ade20k`](https://github.com/panzhang0212/CoCosNet_Pytorch/blob/master/output/test/ade20k/0.png). If you don't want to use mask of exemplar image when testing, you can download model from [here](https://drive.google.com/drive/folders/1m4LXbOc00cu8hXCgf-_N55AIAE9R__m6?usp=sharing), save them in `checkpoints/ade20k`, and run
 ```` bash
 python test.py --name ade20k --dataset_mode ade20k --dataroot ./imgs/ade20k --gpu_ids 0 --nThreads 0 --batchSize 6 --use_attention --maskmix --noise_for_mask --warp_mask_losstype direct --PONO --PONO_C --which_epoch 90
 ````
@@ -74,7 +74,7 @@ and the results are saved in [`output/test/deepfashion`](https://github.com/panz
     python train.py --name ade20k --dataset_mode ade20k --dataroot dataset_path --niter 100 --niter_decay 100 --use_attention --maskmix --warp_mask_losstype direct --weight_mask 100.0 --PONO --PONO_C --batchSize 32 --vgg_normal_correct --gpu_ids 0,1,2,3,4,5,6,7
     ````
     
-- If you don't want to use mask of the exemplar when testing, you can run 
+- If you don't want to use mask of the exemplar image when testing, you can run 
     ````bash
     python train.py --name ade20k --dataset_mode ade20k --dataroot dataset_path --niter 100 --niter_decay 100 --use_attention --maskmix --noise_for_mask --mask_epoch 150 --warp_mask_losstype direct --weight_mask 100.0 --PONO --PONO_C --vgg_normal_correct --batchSize 32 --gpu_ids 0,1,2,3,4,5,6,7
     ````
