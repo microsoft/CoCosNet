@@ -55,7 +55,7 @@ for i, data_i in enumerate(dataloader):
         if opt.dataset_mode == 'deepfashion':
             label = data_i['label'][:,:3,:,:]
         elif opt.dataset_mode == 'celebahqedge':
-            label = data_i['label']
+            label = data_i['label'].expand(-1, 3, -1, -1).float()
         else:
             label = masktorgb(data_i['label'].cpu().numpy())
             label = torch.from_numpy(label).float() / 128 - 1
