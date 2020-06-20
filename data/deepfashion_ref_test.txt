@@ -1,0 +1,4 @@
+img\WOMEN\Dresses\id_00000244\02_1_front.jpg,img\WOMEN\Tees_Tanks\id_00007059\03_3_back.jpg
+img\WOMEN\Dresses\id_00000203\03_1_front.jpg,img\WOMEN\Dresses\id_00002791\01_2_side.jpg
+img\WOMEN\Cardigans\id_00006462\02_7_additional.jpg,img\WOMEN\Dresses\id_00006245\03_2_side.jpg
+img\WOMEN\Cardigans\id_00006266\02_2_side.jpg,img\WOMEN\Blouses_Shirts\id_00007636\01_1_front.jpg
