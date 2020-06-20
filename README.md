@@ -64,6 +64,7 @@ and the results are saved in [`output/test/deepfashion`](https://github.com/panz
 
 ## Training
 
+**Pretrained VGG model** Download from [here](https://drive.google.com/file/d/1fp7DAiXdf0Ay-jANb8f0RHYLTRyjNv4m/view?usp=sharing), move it to `models/`. This model is used to calculate training loss.
 #### 1) ADE20k (mask-to-image)  
 - **Dataset** Download [ADE20k](https://groups.csail.mit.edu/vision/datasets/ADE20K/), move `ADEChallengeData2016/annotations/ADE_train_*.png` to `ADEChallengeData2016/images/training/`, `ADEChallengeData2016/annotations/ADE_val_*.png` to `ADEChallengeData2016/images/validation/
 
