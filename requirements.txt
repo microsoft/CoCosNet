@@ -1,6 +1,6 @@
 matplotlib
-torchvision==0.2.2
+torchvision>=0.2.2
 scikit-image==0.14.2
 opencv-python
-torch==1.0.0
+torch>=1.0.0
 scipy
