@@ -244,13 +244,13 @@ class NoVGGCorrespondence(BaseNetwork):
             seg_input = seg_map
         adaptive_feature_seg = self.adaptive_model_seg(seg_input, seg_input)
         adaptive_feature_img = self.adaptive_model_img(ref_img, ref_img)
-        if self.opt.isTrain and self.opt.novgg_featpair > 0:
-            adaptive_feature_img_pair = self.adaptive_model_img(real_img, real_img)
-            coor_out['loss_novgg_featpair'] = F.l1_loss(adaptive_feature_seg, adaptive_feature_img_pair) * self.opt.novgg_featpair
-
         adaptive_feature_seg = util.feature_normalize(adaptive_feature_seg)
         adaptive_feature_img = util.feature_normalize(adaptive_feature_img)
-        
+        if self.opt.isTrain and self.opt.novgg_featpair > 0:
+            adaptive_feature_img_pair = self.adaptive_model_img(real_img, real_img)
+            adaptive_feature_img_pair = util.feature_normalize(adaptive_feature_img_pair)
+            coor_out['loss_novgg_featpair'] = F.l1_loss(adaptive_feature_seg, adaptive_feature_img_pair) * self.opt.novgg_featpair
+  
         if self.opt.use_coordconv:
             adaptive_feature_seg = self.addcoords(adaptive_feature_seg)
             adaptive_feature_img = self.addcoords(adaptive_feature_img)
