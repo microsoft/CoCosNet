@@ -121,6 +121,16 @@ If you use this code for your research, please cite our papers.
   year={2020}
 }
 ```
+Also, welcome to refer to our [CoCosNet v2](https://github.com/microsoft/CoCosNet-v2):
+```
+@InProceedings{Zhou_2021_CVPR,
+author={Zhou, Xingran and Zhang, Bo and Zhang, Ting and Zhang, Pan and Bao, Jianmin and Chen, Dong and Zhang, Zhongfei and Wen, Fang},
+title={CoCosNet v2: Full-Resolution Correspondence Learning for Image Translation},
+booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+year={2021},
+pages={11465-11475}
+}
+```
 
 ## Acknowledgments
 This code borrows heavily from [SPADE](https://github.com/NVlabs/SPADE). We also thank Jiayuan Mao for his [Synchronized Batch Normalization code](https://github.com/vacancy/Synchronized-BatchNorm-PyTorch).
